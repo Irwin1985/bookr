@@ -1,0 +1,16 @@
+PHPUnit 7.5.11 by Sebastian Bergmann and contributors.
+
+  Warning - The configuration file did not pass validation!
+  The following problems have been detected:
+
+  Line 11:
+  - Element 'phpunit', attribute 'syntaxCheck': The attribute 'syntaxCheck' is not allowed.
+
+  Test results may not be as expected.
+
+
+
+
+Time: 71 ms, Memory: 6.00 MB
+
+[30;43mNo tests executed![0m
