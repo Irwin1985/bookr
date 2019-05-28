@@ -1,11 +1,12 @@
 <?php
-	namespace App\Http\Controllers;
+	namespace App\Http\Controllers;	
 	use App\Book;
+	use Illuminate\Http\Request;
+	use Illuminate\Database\Eloquent\ModelNotFoundException;
 	/**
 	* Class BookController
 	* @package App\Http\Controllers
-	*/
-	use Illuminate\Database\Eloquent\ModelNotFoundException;
+	*/	
 	class BooksController {
 		/**
 		* GET /books
@@ -30,6 +31,15 @@
 									]
 						], 404);
 			}
+		}
+		/**
+		* POST /books
+		* @param Request $request
+		* @return \Synphony\Component\HttpFoundation\Respose
+		*/
+		public function store(Request $request){
+			$book = Book::create($request->all());
+			return response()->json(['created' => true], 201);
 		}
 	}	
 ?>
